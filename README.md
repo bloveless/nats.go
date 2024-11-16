@@ -20,7 +20,7 @@ A [Go](http://golang.org) client for the [NATS messaging system](https://nats.io
 
 ```bash
 # Go client
-go get github.com/nats-io/nats.go/
+go get github.com/bloveless/nats.go/
 
 # Server
 go get github.com/nats-io/nats-server
@@ -30,8 +30,8 @@ When using or transitioning to Go modules support:
 
 ```bash
 # Go client latest or explicit version
-go get github.com/nats-io/nats.go/@latest
-go get github.com/nats-io/nats.go/@v1.37.0
+go get github.com/bloveless/nats.go/@latest
+go get github.com/bloveless/nats.go/@v1.37.0
 
 # For latest NATS Server, add /v2 at the end
 go get github.com/nats-io/nats-server/v2
@@ -43,7 +43,7 @@ go get github.com/nats-io/nats-server/v2
 ## Basic Usage
 
 ```go
-import "github.com/nats-io/nats.go"
+import "github.com/bloveless/nats.go"
 
 // Connect to a server
 nc, _ := nats.Connect(nats.DefaultURL)

@@ -27,7 +27,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nats-io/nats.go/internal/parser"
+	"github.com/bloveless/nats.go/internal/parser"
 	"github.com/nats-io/nuid"
 )
 
@@ -923,7 +923,7 @@ func (js *js) handleAsyncReply(m *Msg) {
 		return
 	}
 
-	//remove
+	// remove
 	delete(js.pafs, id)
 	closeStc()
 	defer closeDchFn()()
@@ -3791,7 +3791,7 @@ const (
 	// DiscardOld will remove older messages to return to the limits. This is
 	// the default.
 	DiscardOld DiscardPolicy = iota
-	//DiscardNew will fail to store new messages.
+	// DiscardNew will fail to store new messages.
 	DiscardNew
 )
 

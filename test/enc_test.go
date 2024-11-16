@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats.go"
-	"github.com/nats-io/nats.go/encoders/builtin"
-	"github.com/nats-io/nats.go/encoders/protobuf"
-	"github.com/nats-io/nats.go/encoders/protobuf/testdata"
+	"github.com/bloveless/nats.go"
+	"github.com/bloveless/nats.go/encoders/builtin"
+	"github.com/bloveless/nats.go/encoders/protobuf"
+	"github.com/bloveless/nats.go/encoders/protobuf/testdata"
 )
 
 //lint:file-ignore SA1019 Ignore deprecation warnings for EncodedConn
@@ -496,7 +496,7 @@ func TestPublishErrorAfterSubscribeDecodeError(t *testing.T) {
 
 	c, _ := nats.NewEncodedConn(nc, nats.JSON_ENCODER)
 
-	//Test message type
+	// Test message type
 	type Message struct {
 		Message string
 	}

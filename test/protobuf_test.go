@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats.go"
+	"github.com/bloveless/nats.go"
 
-	"github.com/nats-io/nats.go/encoders/protobuf"
-	pb "github.com/nats-io/nats.go/encoders/protobuf/testdata"
+	"github.com/bloveless/nats.go/encoders/protobuf"
+	pb "github.com/bloveless/nats.go/encoders/protobuf/testdata"
 )
 
 //lint:file-ignore SA1019 Ignore deprecation warnings for EncodedConn
@@ -77,14 +77,14 @@ func TestEncProtoNilRequest(t *testing.T) {
 
 	testPerson := &pb.Person{Name: "Anatolii", Age: 25, Address: "Ukraine, Nikolaev"}
 
-	//Subscribe with empty interface shouldn't failed on empty message
+	// Subscribe with empty interface shouldn't failed on empty message
 	ec.Subscribe("nil_test", func(_, reply string, _ any) {
 		ec.Publish(reply, testPerson)
 	})
 
 	resp := new(pb.Person)
 
-	//Request with nil argument shouldn't failed with nil argument
+	// Request with nil argument shouldn't failed with nil argument
 	err := ec.Request("nil_test", nil, resp, 100*time.Millisecond)
 	ec.Flush()
 

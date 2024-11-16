@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nats-io/nats.go"
-	"github.com/nats-io/nats.go/jetstream"
+	"github.com/bloveless/nats.go"
+	"github.com/bloveless/nats.go/jetstream"
 )
 
 func TestNewWithAPIPrefix(t *testing.T) {

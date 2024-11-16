@@ -81,8 +81,8 @@ import (
     "strconv"
     "time"
 
-    "github.com/nats-io/nats.go"
-    "github.com/nats-io/nats.go/jetstream"
+    "github.com/bloveless/nats.go"
+    "github.com/bloveless/nats.go/jetstream"
 )
 
 func main() {

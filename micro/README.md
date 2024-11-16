@@ -18,7 +18,7 @@ observability.
 To start using the `micro` package, import it in your application:
 
 ```go
-import "github.com/nats-io/nats.go/micro"
+import "github.com/bloveless/nats.go/micro"
 ```
 
 The core of the `micro` package is the Service. A Service aggregates endpoints
